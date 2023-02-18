@@ -73,7 +73,7 @@
 // Yes, it's all a bit of a hack.
 
 #define META_DEBUG(level, args) \
-	do { if(meta_debug.value < level) break; else ALERT(at_logged, "[META] (debug:%d) %s\n", level, UTIL_VarArgs args ); } while(0)
+	do { if(meta_debug.value < level) break; else ALERT(at_logged, (char*)"[META] (debug:%d) %s\n", level, UTIL_VarArgs args ); } while(0)
 
 // max buffer size for printed messages
 #define MAX_LOGMSG_LEN	1024
